@@ -1,0 +1,13 @@
+### Prueba servidor
+### Crear usuario
+POST http://localhost:3000/api/usuarios
+Content-Type: application/json
+
+{
+  "nombre": "Michael",
+  "correo": "admin@gmail.com",
+  "telefono": "3001234567",
+  "cedula": "123456789",
+  "password": "123456",
+  "lesiones": "Ninguna"
+}

@@ -10,8 +10,14 @@ module.exports = (req, res, next) => {
   try {
     const decoded = jwt.verify(token.replace('Bearer ', ''), process.env.JWT_SECRET);
     req.uid = decoded.uid;
+    req.userRol = decoded.rol;
     next();
   } catch (error) {
     return res.status(401).json({ msg: 'Token inválido' });
   }
 };
+
+
+
+
+

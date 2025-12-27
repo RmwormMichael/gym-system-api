@@ -1,4 +1,4 @@
-const { Schema, model } = require('mongoose');
+const { Schema, model } = require("mongoose");
 
 const UsuarioSchema = new Schema(
   {
@@ -7,6 +7,12 @@ const UsuarioSchema = new Schema(
       required: true,
       trim: true,
     },
+    rol_id: {
+      type: Schema.Types.ObjectId,
+      ref: "Rol",
+      required: true,
+    },
+
     correo: {
       type: String,
       required: true,
@@ -46,15 +52,15 @@ const UsuarioSchema = new Schema(
 
     lesiones: {
       type: String,
-      default: '',
+      default: "",
     },
   },
   {
     timestamps: {
-      createdAt: 'fecha_registro',
-      updatedAt: 'fecha_ultima_actualizacion',
+      createdAt: "fecha_registro",
+      updatedAt: "fecha_ultima_actualizacion",
     },
   }
 );
 
-module.exports = model('Usuario', UsuarioSchema);
+module.exports = model("Usuario", UsuarioSchema);

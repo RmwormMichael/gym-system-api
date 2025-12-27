@@ -1,0 +1,15 @@
+### ============ PLANES ============
+@baseUrl = http://localhost:3000/api
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2OTQ5ZWM3ZmVmNWVhMTY4NDM3MmFiOWIiLCJub21icmUiOiJNaWNoYWVsIiwiY29ycmVvIjoiYWRtaW5AZ21haWwuY29tIiwidGVsZWZvbm8iOiIzMDAxMjM0NTY3IiwiY2VkdWxhIjoiMTIzNDU2Nzg5IiwiZXN0YWRvIjoxLCJsZXNpb25lcyI6Ik5pbmd1bmEiLCJpYXQiOjE3NjY1NDk1NDAsImV4cCI6MTc2NjU3ODM0MH0.op7U2tAH6bWk0XcBtItc2AKrq8-E0ikM_3kO8-W8L8c
+
+### Crear plan
+POST {{baseUrl}}/planes
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "nombre_plan": "Básico Mensual",
+  "duracion_dias": 30,
+  "precio": 25000,
+  "descripcion": "Acceso a zona de pesas y cardio"
+}
